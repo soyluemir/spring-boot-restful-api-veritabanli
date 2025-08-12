@@ -2,18 +2,20 @@ package com.emirhansoylu.services;
 
 import java.util.List;
 
+import com.emirhansoylu.dto.DtoStudent;
+import com.emirhansoylu.dto.DtoStudentIU;
 import com.emirhansoylu.entities.Student;
 
 public interface IStudenService {
 	
-	public Student saveStudent(Student student);
+	public DtoStudent saveStudent(DtoStudentIU student);
 	
-	public List<Student> getAllStudents();
+	public List<DtoStudent> getAllStudents();
 	
-	public Student getStudentById(Integer id);
+	public DtoStudent getStudentById(Integer id);
 	
 	public void deleteStudent(Integer id);
 	
-	public Student  updateStudent(Integer id, Student updateStudent);
+	public DtoStudent  updateStudent(Integer id, DtoStudentIU dtoStudentIU);
 
 }
