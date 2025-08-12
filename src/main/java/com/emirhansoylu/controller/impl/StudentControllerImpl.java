@@ -18,6 +18,8 @@ import com.emirhansoylu.dto.DtoStudentIU;
 import com.emirhansoylu.entities.Student;
 import com.emirhansoylu.services.IStudenService;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/rest/api/student")
 public class StudentControllerImpl implements IStudentController {
@@ -27,7 +29,7 @@ public class StudentControllerImpl implements IStudentController {
 	//DTO KULLANILIR NORMALDE.
 	@PostMapping(path = "/save")
 	@Override
-	public DtoStudent saveStudent( @RequestBody DtoStudentIU dtoStudentIU) {
+	public DtoStudent saveStudent( @RequestBody @Valid DtoStudentIU dtoStudentIU) {
 		return studentService.saveStudent(dtoStudentIU);
 	}
 	
