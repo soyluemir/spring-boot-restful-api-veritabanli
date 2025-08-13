@@ -17,6 +17,6 @@ class ApiError<T> {
 	
 	private Date errorTime;
 	
-	private T errors;
+	private T errors; //generik tip
 
 }
